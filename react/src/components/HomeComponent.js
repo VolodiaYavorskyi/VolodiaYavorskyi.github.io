@@ -40,12 +40,15 @@ class Home extends Component {
         if (formControls.pointA.length != 0 && formControls.pointB.length != 0) {
             this.setState({res: Math.floor(Math.random() * Math.floor(100))});
         }
+        else {
+            this.setState({res: ""});
+        }
     }
 
     renderResult() {
         if (this.state.res.length != 0) {
             return (
-                <div className="row">
+                <div className="row rowContent">
                     <div className="col-12 text-center">
                         {this.state.res}
                     </div>
